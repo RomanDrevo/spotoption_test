@@ -5,17 +5,20 @@
     height: 97%;
 }
 
+.qtr{
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+}
+
 .north{
     background: #a6dcff;
     border: 2px solid #bf9da9;
     width: 105px;
     height: 53px;
-    position: absolute;
     top:0;
     left: 0;
     right: 0;
-    margin: auto;
-    cursor: pointer;
 }
 
 .east{
@@ -23,12 +26,10 @@
     border: 2px solid #bf9da9;
     width: 53px;
     height: 105px;
-    position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
-    margin: auto;
-    cursor: pointer;
+
 }
 
 .south{
@@ -36,12 +37,10 @@
     border: 2px solid #bf9da9;
     width: 105px;
     height: 53px;
-    position: absolute;
     bottom:0;
     left: 0;
     right: 0;
-    margin: auto;
-    cursor: pointer;
+
 }
 
 .west{
@@ -49,12 +48,9 @@
     border: 2px solid #bf9da9;
     width: 53px;
     height: 105px;
-    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    margin: auto;
-    cursor: pointer;
 }
 
 .center{
@@ -62,36 +58,14 @@
     border:2px solid #bf9da9;
     width: 106px;
     height: 106px;
-    position: absolute;
     top:0;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
-    cursor: pointer;
 }
 
-.north-click{
-    background: #2285c5;
-    cursor: pointer;
+.click{
+    filter: brightness(75%);
 }
 
-.east-click{
-    background: #dc9617;
-    cursor: pointer;
-}
 
-.south-click{
-    background: #cccc12;
-    cursor: pointer;
-}
-
-.west-click{
-    background:#21e810;
-    cursor: pointer;
-}
-
-.center-click{
-    background: #86123d;
-    cursor: pointer;
-}
