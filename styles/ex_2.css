@@ -1,0 +1,97 @@
+.container{
+    border:3px solid #4f81bd;
+    position: absolute;
+    width: 97%;
+    height: 97%;
+}
+
+.north{
+    background: #a6dcff;
+    border: 2px solid #bf9da9;
+    width: 105px;
+    height: 53px;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+.east{
+    background: #f9ce80;
+    border: 2px solid #bf9da9;
+    width: 53px;
+    height: 105px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+.south{
+    background: #fafa80;
+    border: 2px solid #bf9da9;
+    width: 105px;
+    height: 53px;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+.west{
+    background: #acffa5;
+    border: 2px solid #bf9da9;
+    width: 53px;
+    height: 105px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+.center{
+    background: #fa81ae;
+    border:2px solid #bf9da9;
+    width: 106px;
+    height: 106px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+.north-click{
+    background: #2285c5;
+    cursor: pointer;
+}
+
+.east-click{
+    background: #dc9617;
+    cursor: pointer;
+}
+
+.south-click{
+    background: #cccc12;
+    cursor: pointer;
+}
+
+.west-click{
+    background:#21e810;
+    cursor: pointer;
+}
+
+.center-click{
+    background: #86123d;
+    cursor: pointer;
+}

@@ -1,0 +1,42 @@
+.container{
+    width: 100%;
+    /*border:1px solid gray;*/
+}
+
+fieldset{
+    width: 320px;
+    padding: 30px;
+    margin: 60px auto;
+    border:1px solid #dfe6e7;
+}
+
+legend{
+    position: relative;
+    top:14px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    color: #9bf7f7;
+    padding: 5px;
+    border:2px solid #2eaaa6;
+    border-radius: 2px;
+    background: #04b0b5;
+}
+
+input{
+    padding: 10px 140px 10px 15px;
+}
+
+input[name=submit]{
+    padding: 13px 84px;
+    border: 2px solid #3bacae;
+    border-radius:3px;
+    background: #01b8b6;
+    color: #c7f8f8;
+    text-transform: uppercase;
+    font-family: Myriad Pro;
+    font-size: 20px;
+}
+
+i{
+    color: #77b9ab;
+}
