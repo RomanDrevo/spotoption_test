@@ -40,3 +40,11 @@ input[name=submit]{
 i{
     color: #77b9ab;
 }
+
+.result{
+    color: #0000fe;
+}
+
+.text-danger{
+    color: #ff0000;
+}

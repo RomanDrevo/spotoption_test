@@ -1,4 +1,5 @@
 <?php
+include 'connection2DB.php';
 error_reporting(0);
 
 
@@ -6,6 +7,7 @@ if (isset($_POST["submit"])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $confPassword = $_POST['confPassword'];
+
 
     // Check if email has been entered and is valid
     if (empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
@@ -25,15 +27,31 @@ if (isset($_POST["submit"])) {
     //Check password validation
     if ($password !== $confPassword) {
         $errPasswordConf = 'Please enter a valid password';
+    }else{
+        $password = md5($password);
     }
 
+
+    //Check if email already used
+    $checkUserEmail = mysqli_query($link, "SELECT email from form WHERE email = '$email'");
+    $count = mysqli_num_rows($checkUserEmail);
+    if ($count > 0) {
+        $user = mysqli_fetch_array($checkUserEmail);
+        $errEmail = "This user exists already. Choose another email.";
+    }else{
+        $insertQuery = "INSERT INTO form ( email, password ) 
+                            VALUES ('$email', '$password')";
+    }
 
     // If there are no errors, show this message
-    if (!$errEmail && !$errPassword && !$errPasswordConf) {
+    if (!$errEmail && !$errPassword && !$errPasswordConf && mysqli_query($link, $insertQuery)) {
         $result = '<div class="alert alert-success">Thank You for registration!</div>';
     }
-
 }
+
+
+
+
 
 ?>
 <!doctype html>
@@ -86,7 +104,15 @@ if (isset($_POST["submit"])) {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        if()
+            $(".form").reset();
 
+    });
+
+
+</script>
 
 </body>
 </html>
