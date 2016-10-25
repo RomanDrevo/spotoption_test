@@ -43,8 +43,11 @@ if (isset($_POST["submit"])) {
                             VALUES ('$email', '$password')";
     }
 
+
+    $succsess = false;
     // If there are no errors, show this message
     if (!$errEmail && !$errPassword && !$errPasswordConf && mysqli_query($link, $insertQuery)) {
+        $succsess = true;
         $result = '<div class="alert alert-success">Thank You for registration!</div>';
     }
 }
@@ -106,8 +109,12 @@ if (isset($_POST["submit"])) {
 
 <script type="text/javascript">
     $(document).ready(function () {
-        if()
-            $(".form").reset();
+        var varJS = "<?php echo $succsess;?>";
+        console.log(varJS);
+        if(varJS ){
+            $(".form")[0].reset();
+        }
+
 
     });
 
