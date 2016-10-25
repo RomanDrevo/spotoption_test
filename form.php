@@ -108,14 +108,15 @@ if (isset($_POST["submit"])) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <script type="text/javascript">
+    //Reset the form after successful submit 
     $(document).ready(function () {
         var varJS = "<?php echo $succsess;?>";
         console.log(varJS);
         if(varJS ){
-            $(".form")[0].reset();
+            $("input[type=email]").val('');
+            $("input[type=password]").val('');
+            $("input[type=confPassword]").val('');
         }
-
-
     });
 
 
